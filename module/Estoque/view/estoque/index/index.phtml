@@ -1,0 +1,18 @@
+<h1>Listagem de Produtos</h1>
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Descrição</th>
+    </tr>
+    <?php foreach($produtos as $produto): ?>
+        <tr>
+            <td><?php echo $produto->getNome();  ?></td>
+            <td><?php echo $produto->getPreco(); ?></td>
+            <td><?php echo $produto->getDescricao(); ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
