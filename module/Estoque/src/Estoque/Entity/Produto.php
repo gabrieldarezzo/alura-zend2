@@ -64,6 +64,40 @@ class Produto
         return $this->descricao;
     }
 
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @param mixed $nome
+     */
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
+    }
+
+    /**
+     * @param mixed $preco
+     */
+    public function setPreco($preco)
+    {
+        $this->preco = $preco;
+    }
+
+    /**
+     * @param mixed $descricao
+     */
+    public function setDescricao($descricao)
+    {
+        $this->descricao = $descricao;
+    }
+
+
+
 
 
 

@@ -28,8 +28,30 @@ class IndexController extends AbstractActionController
 
     public function cadastrarAction()
     {
+        //$uri = $this->getRequest()->getUri();
+        //$base = sprintf('%s://%s', $uri->getScheme(), $uri->getHost()) . '/zend2_estudos/';
+        //print $this->basePath();die();
 
-       return new ViewModel();
+
+
+
+        if($this->request->isPost()){
+            $produto = new Produto();
+
+            $nome = $this->request->getPost('nome');
+            $preco = $this->request->getPost('preco');
+            $descricao = $this->request->getPost('descricao');
+
+            $produto->setNome($nome);
+            $produto->setPreco($preco);
+            $produto->setDescricao($descricao);
+
+            $entityManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+            $entityManager->persist($produto);
+            $entityManager->flush();
+
+        }
+        return new ViewModel();
 
     }
  
