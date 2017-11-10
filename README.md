@@ -35,3 +35,14 @@ CREATE DATABASE zf_estudos COLLATE 'utf8_general_ci';
 .\vendor\bin\doctrine-module orm:validate-schema
 .\vendor\bin\doctrine-module orm:schema-tool:create
 ```  
+
+
+- C.R.U.D. no banco
+- Template pra melhorar o layout da aplicação
+- View/Helpers
+- Gere mensagens de erro e entenda o escopo de flash
+- Criação de paginação
+- Implemente o login e autenticação da aplicação
+- Uso de CSRF e como se proteger
+- Validação de seus dados
+- Crie relacionamentos em seus modelos
